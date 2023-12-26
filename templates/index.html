@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPARQL Query</title>
+  <!-- Import Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    /* Additional Styles */
+    /* Customize these styles as needed */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      padding-top: 40px;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="center-align">Hospitality Services NLP</h1>
+    <form method="POST" class="card-panel">
+      <div class="input-field">
+        <textarea id="query" class="materialize-textarea" name="query"></textarea>
+        <label for="query">Enter your query</label>
+      </div>
+      <div class="input-field center-align">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+        <p>1. give names of hotels and there location</p>
+        <p>2. give names and singleroom price of all the hotels</p>
+        
+        <p>3. give names of hotels having swimmingpool</p>
+        <p>4. give names of hotels and ratings</p>
+        <p>5. names of guests and the price of the hotels</p>
+        <p>6. give names of hotels with room capacity</p>
+      </div>
+    </form>
+  </div>
+  <!-- Import Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

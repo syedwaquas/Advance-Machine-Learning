@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HOSPITALITY SERVICES NLP</title>
+    <!-- Import Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        /* Additional Styles */
+        /* Customize these styles as needed */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4>NLP Staging of Sparql Query</h4>
+        <ul class="collection">
+            <li class="collection-item">Normalization = {{ nor_query }}</li>
+            <li class="collection-item">Lemmatization = {{ lem_query }}</li>
+            <li class="collection-item">POS Tagging = {{ final_query }}</li>
+        </ul>
+        <h4>SPARQL Query</h4>
+        <p>{{ query }}</p>
+        <h5>Result</h5>
+        <table>
+            <tr>
+                <th>Variable</th>
+                <th>Value</th>
+            </tr>
+            {% for item in results %}
+            {% for var, data in item.items() %}
+            <tr>
+                <td>{{ var }}</td>
+                <td>{{ data['value'] }}</td>
+            </tr>
+            {% endfor %}
+            {% endfor %}
+        </table>
+    </div>
+    <!-- Import Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
